@@ -1,26 +1,8 @@
-<style>
-    .icon{
-        display:block ;
-        margin: 0 auto;
-    }
-    .title{
-        text-align: center ;
-        margin-top : 2rem
-    }
-
-    figure{
-        margin-bottom :4rem ;
-    }
-    img{
-        display : block ;
-    }
-</style>
-
 > ⚠ **this is just a beta v0.0.1**, expect errors ; and some messing functionality
 
-<img class="icon" src="./statics/icon.png" alt="file-browser icon" />
+<img style="display:block; margin: 0 auto;" src="./statics/icon.png" alt="file-browser icon" />
 
-<h1 class="title">File Browser</h1>
+<h1 style="text-align: center ; margin-top : 2rem">File Browser</h1>
 
 <p class="description">A minimal file explorer designed for front-end developers 🎉 , built  with  <a href="https://reactjs.org/">React</a> and <a href="https://www.electronjs.org/">Electron</a>
 </p>
@@ -69,17 +51,17 @@ in the dist folder click on the executable 🚀 (enjoy)
 
 ## Screenshots
 
-<figure>
+<figure style="margin-bottom :4rem ;">
     <img class="screenshot" src="./screenshots/Screenshot 2021-08-08 181350.png" alt="file-browser icon" >
     <figcaption>Opening A folder with Blue theme</figcaption>
 </figure>
 
-<figure>
+<figure  style="margin-bottom :4rem ;">
     <img class="screenshot" src="./screenshots/Screenshot 2021-08-08 181411.png" alt="file-browser icon" >
     <figcaption>Opening A folder with Dark theme</figcaption>
 </figure>
 
-<figure>
+<figure  style="margin-bottom :4rem ;">
     <img class="screenshot" src="./screenshots/run script 720.gif" alt="n" >
     <figcaption>Run scripts from a NodeJs folder with package.json</figcaption>
 </figure>
