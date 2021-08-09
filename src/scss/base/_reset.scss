@@ -1,0 +1,76 @@
+body {
+  user-select: none;
+}
+body,
+ul,
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+code {
+  user-select: text;
+}
+
+button {
+  cursor: pointer;
+  padding: 0;
+  background-color: unset;
+  border: unset;
+  // border-radius: 6px;
+  &:hover {
+    // background-color: var(--c-bg-lvl2);
+  }
+}
+img,
+video {
+  width: 100%;
+  display: block;
+}
+
+*::-webkit-scrollbar {
+  width: 2px;
+}
+
+*::-webkit-scrollbar-button {
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: brown;
+}
+
+audio::-webkit-media-controls-enclosure {
+  background-color: transparent;
+}
+audio::-webkit-media-controls-panel {
+  border-radius: 0;
+}
+audio::-webkit-media-controls-play-button {
+}
+audio::-webkit-media-controls-current-time-display {
+}
+
+audio::-webkit-media-controls-timeline {
+}
+
+// thumb
+audio::-webkit-media-controls
+  input[pseudo='-webkit-media-controls-timeline' i]::-webkit-slider-thumb {
+}
+
+input[pseudo='-webkit-media-controls-timeline' i]::-internal-media-controls-segmented-track {
+}
+
+input[pseudo='-webkit-media-controls-timeline' i]::-internal-track-segment-highlight-before {
+}

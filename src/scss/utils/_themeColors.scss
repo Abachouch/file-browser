@@ -1,0 +1,57 @@
+:root {
+  // --c-bg: white;
+  // --c-bg-lvl1: #f3f4f6;
+  // --c-bg-lvl2: #e8e9eb;
+  // --c-txt: #070736;
+  // --c-txt-dim1: #646464;
+  // --c-txt-dim2: #a8a8a8;
+}
+
+// --c-bg: white;
+// --c-bg-lvl1: #f3f4f6;
+// --c-bg-lvl2: #e8e9eb;
+// --c-txt: #070736;
+// --c-txt-dim1: #646464;
+// --c-txt-dim2: #a8a8a8;
+
+// --c-btn-primary-bg: black;
+// --c-btn-primary-txt: white;
+
+.light {
+  --c-bg: #f5f5f5;
+  --c-bg-lvl1: #fcfdff;
+  --c-bg-lvl2: #ecebeb;
+  --c-element-bg: #fcfdff;
+  --c-element-border: #ecebeb;
+  --c-txt: #0e0e7b;
+  --c-txt-dim1: #484646;
+  --c-txt-dim2: #a8a8a8;
+  --c-btn-primary-bg: black;
+  --c-btn-primary-txt: white;
+}
+
+.blue {
+  --c-bg: rgb(41 46 53);
+  --c-bg-lvl1: #283148;
+  --c-bg-lvl2: #474b65;
+  --c-element-bg: #2f3642;
+  --c-element-border: #454773;
+  --c-txt: #d2d2d2;
+  --c-txt-dim1: #e4e4e4;
+  --c-txt-dim2: #a7a7a7;
+  --c-btn-primary-bg: #dfecff;
+  --c-btn-primary-txt: #142963;
+}
+
+.dark {
+  --c-bg: rgb(35, 35, 35);
+  --c-bg-lvl1: #1a1a1a;
+  --c-bg-lvl2: #353535;
+  --c-element-bg: #353535;
+  --c-element-border: #1a1a1a;
+  --c-txt: #a4a4b7;
+  --c-txt-dim1: #909090;
+  --c-txt-dim2: #9e9e9e;
+  --c-btn-primary-bg: white;
+  --c-btn-primary-txt: black;
+}

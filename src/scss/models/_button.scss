@@ -1,0 +1,18 @@
+.button {
+  font-size: 0.85rem;
+  padding: 0.2rem 1rem;
+  &_primary {
+    background-color: var(--c-btn-primary-bg);
+    color: var(--c-btn-primary-txt);
+    &:hover {
+      background-color: var(--c-btn-primary-bg);
+    }
+  }
+  &_secondary {
+    color: var(--c-txt-dim2);
+    background-color: var(--c-bg-lvl2);
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}

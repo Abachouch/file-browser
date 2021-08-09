@@ -1,0 +1,124 @@
+.sidebar {
+  &-header {
+    padding: 0.5rem;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 2rem 3fr 1fr;
+    align-items: center;
+    &-icon {
+      padding: 0.5rem;
+      svg {
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        stroke: var(--c-txt);
+      }
+    }
+    &-navigation.disabled {
+      opacity: 0.1;
+      cursor: default;
+    }
+    &-button {
+      background-color: #1b1b1d;
+      color: white;
+      padding: 0.3rem 0.5rem;
+      font-size: var(--fs-smaller);
+      &:hover {
+        background-color: #1b1b1d;
+        opacity: 0.8;
+      }
+    }
+  }
+  &-toggle {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: var(--c-bg-lvl2);
+    padding: 4px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 1rem 0;
+    &-button {
+      width: 100%;
+      padding: 0.2rem;
+      font-size: var(--fs-smaller);
+      color: var(--c-txt-dim2);
+      &.active {
+        background-color: var(--c-bg);
+        color: var(--c-txt);
+        box-shadow: 1px 1px 5px rgb(0 0 0 / 25%);
+        border-radius: 3px;
+        font-weight: 700;
+      }
+    }
+  }
+  &-lists {
+    overflow: auto;
+    flex-grow: 2;
+  }
+  &-heading {
+    color: var(--c-txt-dim2);
+    font-size: var(--fs-small);
+    font-weight: 400;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  &-list {
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    &:hover {
+      background-color: var(--c-bg-lvl2);
+    }
+    &-icon {
+      stroke: var(--c-txt-dim1);
+      width: var(--fs-small);
+      height: var(--fs-small);
+      margin-right: 1rem;
+    }
+    &-circle {
+      display: block;
+      border-radius: 3px;
+      border-width: 2px;
+      border-style: solid;
+      width: 8px;
+      height: 8px;
+      margin-right: 0.5rem;
+    }
+    &-title {
+      color: var(--c-txt-dim1);
+      flex-grow: 2;
+      font-size: var(--fs-small);
+    }
+    &-badge {
+      font-size: var(--fs-smaller);
+      color: var(--c-txt-dim2);
+    }
+  }
+}
+.placesbar {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 0.5rem 1rem;
+  &-item {
+    padding: 0.5rem;
+    &-icon {
+      width: 100%;
+      max-width: var(--fs-regular);
+      max-height: var(--fs-regular);
+      stroke: var(--c-txt-dim2);
+      display: block;
+    }
+    &:hover > &-icon {
+      stroke: var(--c-txt-dim1);
+    }
+  }
+}

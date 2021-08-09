@@ -1,0 +1,99 @@
+/* Modal */
+.modal {
+  // variables
+  --s-padding: 1rem;
+
+  &-dim {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: blur(0.8);
+    backdrop-filter: blur(1px);
+    background-color: rgba(113, 113, 113, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  background-color: var(--c-bg);
+  border-radius: 8px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.45);
+
+  &-header {
+    font-size: var(--fs-small);
+    color: var(--c-txt-dim2);
+    font-weight: 400;
+    padding: var(--s-padding);
+    // border-bottom: 1px solid var(--c-bg-lvl1);
+  }
+  &-footer {
+    padding: var(--s-padding);
+    border-top: 1px solid var(--c-bg-lvl1);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+}
+
+.tagsbox {
+  width: 460px;
+  min-height: 250px;
+  // border: 1px solid var(--c-txt-dim2);
+  padding: var(--s-padding);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: flex-start;
+  &-input {
+    background-color: var(--c-bg);
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    color: var(--c-txt);
+    width: 100%;
+  }
+}
+
+.tag {
+  // padding: 0.1rem 0;
+  border-radius: 5px;
+  background-color: var(--c-bg-lvl1);
+  display: flex;
+  align-items: center;
+
+  &-circle {
+    width: 10px;
+    height: 10px;
+    margin-inline: 0.9rem;
+    border-width: 2px;
+    border-style: solid;
+    display: block;
+    border-radius: 3px;
+  }
+
+  &-name {
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    color: var(--c-txt-dim1);
+  }
+
+  &-delete {
+    height: 1.9rem;
+    width: 2rem;
+    /* border-radius: 50%; */
+    padding: 0.65rem;
+    stroke-width: 1.5px;
+    display: block;
+    stroke: var(--c-txt-dim1);
+    /* margin-right: 0.2rem; */
+    cursor: pointer;
+    &:hover {
+      stroke: var(--c-txt-dim2);
+    }
+  }
+}

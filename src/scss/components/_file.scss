@@ -1,0 +1,33 @@
+.file {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--c-element-bg);
+  color: var(--c-txt);
+  border: 1px solid var(--c-element-border);
+  display: inline-block;
+  border-radius: 4px;
+  word-break: break-word;
+  &-title {
+    font-weight: 400;
+    padding-bottom: 1rem;
+    color: var(--c-txt-dim2);
+    font-size: var(--fs-small);
+  }
+  &.text {
+    white-space: break-spaces;
+    word-break: break-word;
+    font-size: var(--fs-small);
+    border-radius: 4px;
+    padding: 1rem;
+    max-height: 400px;
+    overflow: auto;
+    user-select: text;
+  }
+  &.image {
+  }
+  &.unknown {
+    &-icon {
+      background-color: yellowgreen;
+    }
+  }
+}
