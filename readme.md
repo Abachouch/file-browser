@@ -1,23 +1,59 @@
 > ⚠ **this is just a beta v0.0.1**, expect errors ; and some messing functionality
 
-<img style="display:block; margin: 0 auto;" src="./statics/icon.png" alt="file-browser icon" />
+<div  align="center">
+    <img src="./statics/icon.png" width="180px" height="180px" alt="file-browser icon" />
+</div>
 
-<h1 style="text-align: center ; margin-top : 2rem">File Browser</h1>
+<h1  align="center" >File Browser</h1>
 
-<p class="description">A minimal file explorer designed for front-end developers 🎉 , built  with  <a href="https://reactjs.org/">React</a> and <a href="https://www.electronjs.org/">Electron</a>
-</p>
+![file-browser version](https://img.shields.io/badge/dynamic/json?label=version&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FAbachouch%2Ffile-browser%2Fmain%2Fpackage.json)
+![alt ima](https://img.shields.io/badge/platform-win-lightgray)
+![alt ima](https://img.shields.io/github/issues/Abachouch/file-browser)
 
-### Usage
+A minimal file explorer designed for **front-end developers** 🎉 , built with [React](https://reactjs.org) and [Electron](https://www.electronjs.org)
 
-install dependencies
+## technologies
+
+**file-browser** is an Electron js application therefore it uses web technologies (JavaScript, HTML, and CSS ) like any other website,
+
+[![react version](https://img.shields.io/badge/dynamic/json?color=green&label=react&query=dependencies.react&url=https%3A%2F%2Fraw.githubusercontent.com%2FAbachouch%2Ffile-browser%2Fmain%2Fpackage.json)](https://reactjs.org)
+[![electron version](https://img.shields.io/badge/dynamic/json?label=electron&query=devDependencies.electron&url=https%3A%2F%2Fraw.githubusercontent.com%2FAbachouch%2Ffile-browser%2Fmain%2Fpackage.json)](https://www.electronjs.org)
+[![webpack version](https://img.shields.io/badge/dynamic/json?label=webpack&query=devDependencies.webpack&url=https%3A%2F%2Fraw.githubusercontent.com%2FAbachouch%2Ffile-browser%2Fmain%2Fpackage.json)](https://webpack.js.org)
+[![sass version](https://img.shields.io/badge/dynamic/json?label=sass&query=devDependencies.sass&url=https%3A%2F%2Fraw.githubusercontent.com%2FAbachouch%2Ffile-browser%2Fmain%2Fpackage.json)](https://sass-lang.com)
+[![nedb-promises version](https://img.shields.io/badge/nedb--promises-^5.0.0-success)](https://github.com/louischatriot/nedb)
+[![node-disk-info version](https://img.shields.io/badge/node--disk--info-^1.3.0-success)](https://www.npmjs.com/package/node-disk-info)
+[![electron-builder version](https://img.shields.io/badge/electron--builder-^22.11.7-success)](https://github.com/electron-userland/electron-builder)
+[![@reduxjs/toolkit version](https://img.shields.io/badge/@reduxjs/toolkit-^1.6.0-success)](https://redux.js.org)
+
+## Usage
+
+first clone or download projects code to your local directory , then install dependencies
 
 ```
-yarn install
+# Clone the repository
+git clone https://github.com/Abachouch/file-browser.git
+
+# Go into the repository
+cd file-browser
+
+# Install the dependencies
+yarn
 ```
 
-then generate `file-browser Setup 0.0.1.exe` (for now its windows only 😁)
+to start electron app
 
 ```
+# first build the react app
+yarn build
+
+# then run electron
+yarn start
+```
+
+to generate `file-browser Setup 0.0.1.exe` (for now its windows only 😁)
+
+```
+yarn build
 yarn dist
 ```
 
@@ -33,35 +69,31 @@ in the dist folder click on the executable 🚀 (enjoy)
 - [x] show text files
 - [x] open in external apps
 - [x] builtin audio player
-<figure>
-    <img class="screenshot" src="./screenshots/Screenshot 2021-08-08 181557.png" alt="file-browser icon" >
-    <figcaption>Audio Player</figcaption>
-</figure>
+
+![img](./screenshots/Screenshot%202021-08-08%20181557.png)
 
 ## TODO
 
-- [-] themes (dark / ligh / blue ) 80%
+- [-] themes ( dark / light / blue ) 80%
 - [ ] save files in moodboards
 - [ ] get color palete from images
 - [ ] create new a nodejs Project
+- [ ] git integration
 - [ ] resize image for web
 - [ ] highlight code
+- [ ] control the view of image preview
+- [ ] build for linux
 
 ---
 
 ## Screenshots
 
-<figure style="margin-bottom :4rem ;">
-    <img class="screenshot" src="./screenshots/Screenshot 2021-08-08 181350.png" alt="file-browser icon" >
-    <figcaption>Opening A folder with Blue theme</figcaption>
-</figure>
+![img](./screenshots/Screenshot%202021-08-08%20181350.png)
 
-<figure  style="margin-bottom :4rem ;">
-    <img class="screenshot" src="./screenshots/Screenshot 2021-08-08 181411.png" alt="file-browser icon" >
-    <figcaption>Opening A folder with Dark theme</figcaption>
-</figure>
+![img](./screenshots/Screenshot%202021-08-08%20181411.png)
 
-<figure  style="margin-bottom :4rem ;">
-    <img class="screenshot" src="./screenshots/run script 720.gif" alt="n" >
-    <figcaption>Run scripts from a NodeJs folder with package.json</figcaption>
-</figure>
+![img](./screenshots/run%20script%20720.gif)
+
+## License
+
+GNU/GPL Version 3
