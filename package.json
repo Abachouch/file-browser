@@ -5,7 +5,7 @@
   "description": "minimal yet just what you need file explorer",
   "main": "mainProcess/electron.js",
   "homepage": "./",
-  "license": "MIT",
+  "license": "GNU/GPL Version 3",
   "scripts": {
     "start": "electron .",
     "dev": "webpack --config ./webpack.config.js --env MODE=development",
