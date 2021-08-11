@@ -9,7 +9,7 @@ import TagsList from './tags-list/tags-list.jsx'
 import PlacesList from './places-list/places-list.jsx'
 import ProjectsList from './projects-list/projects-list.jsx'
 
-import { Menu } from '../components/menu.jsx'
+import Menu from '../components/menu.jsx'
 import { forward, back } from '../../redux/historySlice.js'
 
 export default function SideBar() {
@@ -30,7 +30,13 @@ export default function SideBar() {
         >
           <BurgerIcon />
         </button>
-        {isShowMenu && <Menu></Menu>}
+        {isShowMenu && (
+          <Menu
+            onClose={() => {
+              setIsShowMenu(false)
+            }}
+          ></Menu>
+        )}
 
         <div className="sidebar-header-navigation">
           <button

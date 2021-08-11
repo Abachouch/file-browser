@@ -1,6 +1,7 @@
 const { ipcRenderer } = window.require('electron')
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
+import { getFileNameFromPath } from '../../../helpers/pathHelper.js'
 // import { back, forward } from '../../redux/historySlice.js';
 import Folder from '../../components/folder.jsx'
 
@@ -24,7 +25,9 @@ export default function FolderList() {
   if (folders.length > 0)
     return (
       <div className="sidebar-list">
-        <h3 className="sidebar-heading">{history[index].link} </h3>
+        <h3 className="sidebar-heading">
+          &gt; {getFileNameFromPath(history[index].link)}{' '}
+        </h3>
         {folders.map((folder, index) => {
           return <Folder icon="folder" path={folder.path} key={index} />
         })}

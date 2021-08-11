@@ -1,34 +1,19 @@
 const { ipcMain, app, shell, clipboard } = require('electron')
-const { readdir, readFile, stat } = require('fs/promises')
+const { readdir, readFile } = require('fs/promises')
 const { join } = require('path')
 const childProcess = require('child_process')
 const disksInfo = require('node-disk-info')
-
-ipcMain.handle('testDrives', () => {
-  return new Promise((resolve, reject) => {
-    resolve([
-      { name: 'C://', capacity: 255 },
-      { name: 'D://', capacity: 135 },
-      { name: 'E://', capacity: 1488 }
-    ])
-  })
-})
-
-/// working handlers
 
 ipcMain.on('getHomePath', event => {
   event.returnValue = app.getPath('home')
 })
 
-ipcMain.handle('getDisk', async event => {
+ipcMain.handle('getDrives', async () => {
   return disksInfo.getDiskInfo()
 })
 
-/**
- * returns :  {name : string , path :string }[]
- */
 ipcMain.handle('getFolders', (event, path) => {
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
     readdir(path, { withFileTypes: true })
       .then(entries => {
         let folders = []
@@ -43,7 +28,7 @@ ipcMain.handle('getFolders', (event, path) => {
 })
 
 ipcMain.handle('getFiles', async (event, path) => {
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
     readdir(path, { withFileTypes: true })
       .then(entries => {
         let files = []
@@ -113,7 +98,7 @@ ipcMain.handle('isProject', (event, path) => {
 })
 
 ipcMain.handle('getProjectInfo', (event, path) => {
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
     readFile(join(path, 'package.json'), { encoding: 'utf-8' })
       .then(result => {
         if (!result) throw new Error('cant read File  : ' + path)
@@ -131,7 +116,7 @@ ipcMain.handle('getProjectInfo', (event, path) => {
           throw new Error('cant parse JSON')
         }
       })
-      .catch(err => {
+      .catch(() => {
         resolve(false)
       })
   })

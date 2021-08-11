@@ -1,9 +1,11 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { show as showContextmenu } from '../../../redux/contextmenuSlice'
-import TextFile from './fileText.jsx'
+import TextFile from './text/text-file.jsx'
 import propTypes from 'prop-types'
-import AudioFile from './audio-file.jsx'
+import AudioFile from './audio/audio-file.jsx'
+import './file.scss'
+import { getExtentionfromPath } from '../../../helpers/pathHelper'
 const { ipcRenderer } = window.require('electron')
 
 function file(path, type) {
@@ -12,12 +14,11 @@ function file(path, type) {
       return (
         <div
           onClick={() => {
-            // window.open(`preview/preview.html?${path}`, 'preview', path, true)
             ipcRenderer.send('openPreview', path)
           }}
           className="file image"
         >
-          <img src={path} alt={path} />
+          <img className={getExtentionfromPath(path)} src={path} alt={path} />
         </div>
       )
     case 'audio':
@@ -37,7 +38,6 @@ function file(path, type) {
 
 function FileComponent({ path, type }) {
   const dispatch = useDispatch()
-
   return (
     <div
       onContextMenu={event => {

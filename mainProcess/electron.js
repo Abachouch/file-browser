@@ -12,7 +12,8 @@ function createWindow() {
     minHeight: 600,
     autoHideMenuBar: true,
     backgroundColor: '#232325',
-    frame: false,
+    frame: true,
+    darkTheme: true,
 
     webPreferences: {
       webSecurity: false,
@@ -111,4 +112,8 @@ ipcMain.handle('getAudioMetadata', (event, args) => {
   return AudioMetadata.parseFile(
     'C:\\Users\\youss\\Anys ft ouenza - B4T (Cloud26).mp3'
   )
+})
+
+ipcMain.on('isMinimized', event => {
+  event.returnValue = win.isMinimized()
 })

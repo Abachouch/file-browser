@@ -45,7 +45,7 @@ export default function FileContextmenu(props) {
         {getExtentionfromPath(props.path) === 'svg' && (
           <li
             onClick={() => {
-              ipcRenderer.invoke('copySvg', props.path)
+              ipcRenderer.sendSync('copySvg', props.path)
             }}
             className="contextmenu-item"
           >

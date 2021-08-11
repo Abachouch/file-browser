@@ -1,0 +1,10 @@
+.files {
+  column-width: 200px;
+  &:empty {
+    background-image: url(../../../statics/explorer_bg.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 60vh;
+    margin: auto;
+  }
+}

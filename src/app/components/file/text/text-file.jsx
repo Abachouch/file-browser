@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 const { ipcRenderer } = window.require('electron')
 import React, { useEffect, useState } from 'react'
+import './text-file.scss'
 
 export default function TextFile(props) {
   const [text, setText] = useState('')
 
-  console.log('getting text')
   useEffect(() => {
     ipcRenderer.invoke('readTextFile', props.path).then(txt => {
       setText(txt)

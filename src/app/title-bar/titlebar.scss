@@ -1,5 +1,38 @@
-.titlebar-controls-icon {
-  stroke: var(--c-txt);
-  width: 0.6rem;
-  stroke-width: 1.5px;
+.titlebar {
+  &-title {
+    font-size: var(--fs-smaller);
+    color: var(--c-txt-dim1);
+    font-weight: 400;
+    margin-left: 1rem;
+  }
+  &-controls {
+    display: flex;
+    height: 32px;
+
+    &-button {
+      border-radius: 0;
+      -webkit-app-region: no-drag;
+      width: 46px;
+
+      &:hover {
+        background-color: var(--c-bg-lvl1);
+      }
+      &_close {
+        &:hover {
+          background-color: rgb(201, 84, 84);
+        }
+      }
+    }
+
+    &-icon {
+      display: block;
+      margin: auto;
+      stroke: var(--c-txt);
+      width: 0.6rem;
+      stroke-width: 2px;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  }
 }

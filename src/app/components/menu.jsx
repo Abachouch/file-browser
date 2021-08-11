@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import propTypes from 'prop-types'
 import {
   LightIcon,
   AboutIcon,
@@ -7,11 +8,18 @@ import {
   StarIcon
 } from '../../helpers/svgs.jsx'
 
-export function Menu() {
+function Menu({ onClose }) {
   const [theme, setTheme] = useState()
 
   useEffect(() => {
     setTheme(window.localStorage.getItem('theme') || 'white')
+    document.body.addEventListener(
+      'click',
+      () => {
+        onClose()
+      },
+      { once: true }
+    )
   }, [])
 
   return (
@@ -84,3 +92,9 @@ export function Menu() {
     </div>
   )
 }
+
+Menu.propTypes = {
+  onClose: propTypes.func
+}
+
+export default Menu

@@ -1,12 +1,13 @@
-.file {
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background-color: var(--c-element-bg);
-  color: var(--c-txt);
-  border: 1px solid var(--c-element-border);
+.file-wraper {
   display: inline-block;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.file {
+  color: var(--c-txt);
   border-radius: 4px;
-  word-break: break-word;
+  background-color: var(--c-bg-lvl1);
   &-title {
     font-weight: 400;
     padding-bottom: 1rem;
@@ -19,15 +20,13 @@
     font-size: var(--fs-small);
     border-radius: 4px;
     padding: 1rem;
+    width: 100%;
     max-height: 400px;
     overflow: auto;
     user-select: text;
   }
-  &.image {
-  }
-  &.unknown {
-    &-icon {
-      background-color: yellowgreen;
-    }
+
+  & > .svg {
+    padding: 1rem;
   }
 }

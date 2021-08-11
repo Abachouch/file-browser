@@ -1,7 +1,7 @@
 import React from 'react'
 
 import SideBar from './app/sidebar/sidebar.jsx'
-import MainContent from './app/main/main.jsx'
+import MainContent from './app/explorer/explorer.jsx'
 import Contextmenu from './app/components/contextmenu/contextmenu.jsx'
 import { useSelector } from 'react-redux'
 import NewTag from './app/components/modals/newTag.jsx'

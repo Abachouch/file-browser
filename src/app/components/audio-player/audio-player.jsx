@@ -9,6 +9,7 @@ import PauseIcon from '../../../icons/icon-pause.jsx'
 import picard from '../../../../statics/picard.jpg'
 import { useDispatch } from 'react-redux'
 import { setAudio } from '../../../redux/audio-player-slice.js'
+import { getFileNameFromPath } from '../../../helpers/pathHelper.js'
 
 const { ipcRenderer } = window.require('electron/renderer')
 
@@ -88,7 +89,7 @@ function AudioPlayer({ path }) {
         }}
       />
       <div className="audioplayer-info">
-        <div className="audioplayer-title">{path}</div>
+        <div className="audioplayer-title">{getFileNameFromPath(path)}</div>
         <div className="audioplayer-controls">
           {!isPlaying && (
             <PlayIcon

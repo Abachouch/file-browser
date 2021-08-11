@@ -8,7 +8,7 @@ export default function DrivesList() {
 
   useEffect(() => {
     ipcRenderer
-      .invoke('getDisk')
+      .invoke('getDrives')
       .then(result => {
         setDisks(result)
       })
@@ -16,27 +16,20 @@ export default function DrivesList() {
         ipcRenderer.removeAllListeners('testDrives')
       })
   }, [])
-
-  if (disks.length > 0)
-    return (
-      <div className="sidebar-list">
-        <h3 className="sidebar-heading">Drives</h3>
-        {disks.map((disk, index) => {
-          return (
-            <Folder
-              key={index}
-              path={disk._mounted + '//'}
-              icon="drive"
-              capacity={disk._capacity}
-              total={disk._blocks}
-            />
-          )
-        })}
-      </div>
-    )
-  else return ''
+  return (
+    <div className="sidebar-list">
+      <h3 className="sidebar-heading">Drives</h3>
+      {disks.map((disk, index) => {
+        return (
+          <Folder
+            key={index}
+            path={disk._mounted + '//'}
+            icon="drive"
+            capacity={disk._capacity}
+            total={disk._blocks}
+          />
+        )
+      })}
+    </div>
+  )
 }
-
-// function capacityToString(capacity) {
-//   return capacity + ' GB'
-// }
