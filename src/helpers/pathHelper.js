@@ -43,7 +43,21 @@ export function getFileTypeFromPath(pathString) {
     case 'json':
     case 'js':
     case 'css':
-    case 'ini':
+    case 'php':
+    case 'java':
+    case 'py':
+    case 'sql':
+    case 'asp':
+    case 'htm':
+    case 'xhtml':
+    case 'xml':
+    case 'jsp':
+    case 'pl':
+    case 'rb':
+    case 'rhtml':
+    case 'rss':
+    case 'coffe':
+    case 'cake':
     case 'html':
       return 'text'
     default:
