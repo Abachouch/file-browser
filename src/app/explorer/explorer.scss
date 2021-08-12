@@ -1,5 +1,6 @@
 .files {
   column-width: 200px;
+
   &:empty {
     background-image: url(../../../statics/explorer_bg.svg);
     background-repeat: no-repeat;
@@ -7,4 +8,14 @@
     height: 90vh;
     margin: auto;
   }
+}
+
+#explorer {
+  padding: 0 1rem 1rem 1rem;
+  flex-grow: 2;
+  height: 100vh;
+  overflow-x: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
 }

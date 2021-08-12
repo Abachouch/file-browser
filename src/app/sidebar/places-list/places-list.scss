@@ -1,0 +1,19 @@
+.placesbar {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 0.5rem 1rem;
+  &-item {
+    padding: 0.5rem;
+    &-icon {
+      width: 100%;
+      max-width: var(--fs-regular);
+      max-height: var(--fs-regular);
+      stroke: var(--c-txt-dim2);
+      display: block;
+    }
+    &:hover > &-icon {
+      stroke: var(--c-txt-dim1);
+    }
+  }
+}

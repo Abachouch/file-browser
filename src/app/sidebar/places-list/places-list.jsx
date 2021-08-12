@@ -10,6 +10,7 @@ import {
   PicturesIcon
 } from '../../../helpers/svgs.jsx'
 import { pushPlace } from '../../../redux/historySlice.js'
+import './places-list.scss'
 
 export default function PlacesList() {
   const dispatch = useDispatch()

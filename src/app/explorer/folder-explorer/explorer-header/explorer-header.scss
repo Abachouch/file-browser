@@ -1,0 +1,17 @@
+.explorer-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: right;
+  background-color: var(--c-bg);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  &-filter {
+    color: var(--c-txt-dim2);
+    font-size: var(--fs-smaller);
+    margin: 1rem;
+    &.active {
+      color: var(--c-txt);
+    }
+  }
+}

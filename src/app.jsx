@@ -5,8 +5,8 @@ import MainContent from './app/explorer/explorer.jsx'
 import Contextmenu from './app/components/contextmenu/contextmenu.jsx'
 import { useSelector } from 'react-redux'
 import NewTag from './app/components/modals/newTag.jsx'
-
 import AudioPlayer from './app/components/audio-player/audio-player.jsx'
+import './app.scss'
 
 function App() {
   const ContextMenuPosition = useSelector(state => state.contextmenu.position)
@@ -16,14 +16,14 @@ function App() {
   const audio = useSelector(state => state.audioPlayer.audio)
 
   return (
-    <div id="l-app">
+    <>
       <SideBar></SideBar>
       <MainContent> </MainContent>
       {isContextMenuOpen && <Contextmenu position={ContextMenuPosition} />}
 
       {newTagModal.isOpen && <NewTag path={newTagModal.path}></NewTag>}
       {audio != '' && <AudioPlayer path={audio} />}
-    </div>
+    </>
   )
 }
 

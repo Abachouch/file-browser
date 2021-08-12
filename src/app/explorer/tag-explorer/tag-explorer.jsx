@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { getFileTypeFromPath } from '../../../helpers/pathHelper.js'
 import FileComponent from '../../components/file/file.jsx'
-
-export default function FileExplorer() {
+import './tag-explorer.scss'
+function TagExplorer() {
   const history = useSelector(state => state.history.list)
   const index = useSelector(state => state.history.index)
   let link = history[index].link
@@ -13,30 +13,32 @@ export default function FileExplorer() {
 
   useEffect(() => {
     ipcRenderer
-      .invoke('getFiles', link)
+      .invoke('getFilesOfTag', link)
       .then(result => {
+        console.log(result)
         setFiles(result)
       })
       .finally(() => {
-        ipcRenderer.removeAllListeners('getFiles')
+        ipcRenderer.removeAllListeners('getFilesOfTag')
       })
   }, [history, index])
 
   return (
-    <div id="l-content" className=" fileexplorer">
+    <>
+      <h1 className="tagExplorer-title">{link}</h1>
       <div className="files">
         {files.map((file, index) => {
-          const type = getFileTypeFromPath(file)
-          if (type !== 'unknown')
-            return (
-              <FileComponent
-                key={index}
-                path={file}
-                type={type}
-              ></FileComponent>
-            )
+          return (
+            <FileComponent
+              type={getFileTypeFromPath(file.path)}
+              key={index}
+              path={file.path}
+            ></FileComponent>
+          )
         })}
       </div>
-    </div>
+    </>
   )
 }
+
+export default TagExplorer

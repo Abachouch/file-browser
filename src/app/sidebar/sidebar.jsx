@@ -1,6 +1,5 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-
 import { BurgerIcon, ReturnIcon, ForwardIcon } from '../../helpers/svgs.jsx'
 import DrivesList from './drives-list/drives-list.jsx'
 import PinedList from './pined-list/pined-list.jsx'
@@ -8,9 +7,9 @@ import FolderList from './folders-list/folders-list.jsx'
 import TagsList from './tags-list/tags-list.jsx'
 import PlacesList from './places-list/places-list.jsx'
 import ProjectsList from './projects-list/projects-list.jsx'
-
 import Menu from '../components/menu.jsx'
 import { forward, back } from '../../redux/historySlice.js'
+import './sidebar.scss'
 
 export default function SideBar() {
   let [panel, setPanel] = React.useState('explorer')
@@ -63,7 +62,9 @@ export default function SideBar() {
           </button>
         </div>
 
-        <button className="sidebar-header-button">Moodboard</button>
+        <button className="sidebar-header-button" hidden>
+          Moodboard
+        </button>
         <div className="sidebar-toggle">
           <button
             onClick={() => {

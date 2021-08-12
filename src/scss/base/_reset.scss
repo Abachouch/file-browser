@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   user-select: none;
 }
@@ -28,10 +31,6 @@ button {
   padding: 0;
   background-color: unset;
   border: unset;
-  // border-radius: 6px;
-  &:hover {
-    // background-color: var(--c-bg-lvl2);
-  }
 }
 img,
 video {
