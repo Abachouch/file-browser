@@ -63,18 +63,19 @@ in the dist folder click on the executable 🚀 (enjoy)
 
 - [x] run scripts in package.json
 - [x] save folders as projects
+- [x] filter files by type
 - [x] pin Folders
 - [x] tag files
 - [x] copy svg code
 - [x] show text files
 - [x] open in external apps
 - [x] builtin audio player
+- [x] themes ( dark / light / blue )
 
 ![img](./screenshots/Screenshot%202021-08-08%20181557.png)
 
 ## TODO
 
-- [-] themes ( dark / light / blue ) 80%
 - [ ] save files in moodboards
 - [ ] get color palete from images
 - [ ] create new a nodejs Project
@@ -88,9 +89,9 @@ in the dist folder click on the executable 🚀 (enjoy)
 
 ## Screenshots
 
-![img](./screenshots/Screenshot%202021-08-08%20181350.png)
+![img](./screenshots/filebrowser_folder.png)
 
-![img](./screenshots/Screenshot%202021-08-08%20181411.png)
+![img](./screenshots/filebrowser_empty_folder.png)
 
 ![img](./screenshots/run%20script%20720.gif)
 
