@@ -12,6 +12,10 @@
 
 A minimal file explorer designed for **front-end developers** 🎉 , built with [React](https://reactjs.org) and [Electron](https://www.electronjs.org)
 
+## Downloads
+- v0.0.1 alpha  [download](https://github.com/Abachouch/file-browser/releases/download/0.0.1/file-browser.Setup.0.0.1.exe) the executable for windows
+
+
 ## technologies
 
 **file-browser** is an Electron js application therefore it uses web technologies (JavaScript, HTML, and CSS ) like any other website,
