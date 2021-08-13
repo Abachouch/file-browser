@@ -5,7 +5,8 @@
   "description": "minimal yet just what you need file explorer",
   "main": "mainProcess/electron.js",
   "homepage": "./",
-  "license": "GNU/GPL Version 3",
+  "license": "AGPL-3.0-or-later",
+  "icon": "./statics/icon512.png",
   "scripts": {
     "start": "electron .",
     "dev": "webpack --config ./webpack.config.js --env MODE=development",
@@ -43,6 +44,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.0",
+    "copy-webpack-plugin": "^9.0.1",
     "music-metadata": "^7.11.0",
     "nedb-promises": "^5.0.0",
     "node-disk-info": "^1.3.0",
@@ -54,11 +56,11 @@
     "appId": "io.github.abachouch.file-browser",
     "productName": "file-browser",
     "copyright": "Copyright © 2021 Abachouch Youssouf",
+    "icon": "./build/icon512.png",
     "files": [
       "build/**/*",
       "mainProcess/**/*",
       "statics/**/*"
-
     ],
     "win": {
       "target": [

@@ -14,7 +14,7 @@ function createWindow() {
     backgroundColor: '#232325',
     frame: true,
     darkTheme: true,
-
+    icon: '../statics/icons/icon.png',
     webPreferences: {
       webSecurity: false,
       nodeIntegration: true,
@@ -26,6 +26,7 @@ function createWindow() {
     if (info.frameName === 'preview') {
       return {
         action: 'allow',
+        icon: '../statics/icons/icon.png',
         overrideBrowserWindowOptions: {
           frame: true,
           fullscreenable: false,

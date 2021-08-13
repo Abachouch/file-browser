@@ -1,4 +1,6 @@
 const htmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
+
 const path = require('path')
 
 module.exports = env => {
@@ -18,6 +20,9 @@ module.exports = env => {
       plugins: [
         new htmlWebpackPlugin({
           template: './src/index.html'
+        }),
+        new CopyPlugin({
+          patterns: [{ from: './statics/icons', to: '' }]
         })
       ],
       module: {
@@ -41,7 +46,7 @@ module.exports = env => {
               loader: 'file-loader',
               options: {
                 limit: 8000,
-                name: 'icons/[hash]-[name].[ext]'
+                name: 'images/[hash]-[name].[ext]'
               }
             }
           }
@@ -87,7 +92,7 @@ module.exports = env => {
               loader: 'file-loader',
               options: {
                 limit: 8000,
-                name: 'icons/[hash]-[name].[ext]'
+                name: 'images/[hash]-[name].[ext]'
               }
             }
           }
